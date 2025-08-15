@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import axios from 'axios';
+import axios from 'axios'; 
 import Header from './components/Header';
 import ArcosListado from './components/ArcosListado';
 import PersonajesListado from './components/PersonajesListado';
