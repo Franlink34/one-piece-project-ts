@@ -1,13 +1,13 @@
-import eastBlueImage from '../assets/east-Blue.webp';
+import eastBlueImage from '../assets/east-blue.webp';
 import alabastaImage from '../assets/alabasta.webp';
-import celestialIslandImage from '../assets/celestialIsland.webp';
-import waterSevenImage from '../assets/waterSeven.webp';
-import thrillerBarkImage from '../assets/thrillerBark.webp';
-import warAtTheTopImage from '../assets/warAtTheTop.webp';
-import ileDesHommesImage from '../assets/ileDesHommes.webp';
+import celestialIslandImage from '../assets/celestial-island.webp';
+import waterSevenImage from '../assets/water-seven.webp';
+import thrillerBarkImage from '../assets/thriller-bark.webp';
+import warAtTheTopImage from '../assets/war-at-the-top.webp';
+import ileDesHommesImage from '../assets/ile-des-hommes.webp';
 import dressrosaImage from '../assets/dressrosa.webp';
-import foursEmperorsImage from '../assets/foursEmperors.webp';
-import finalSagaImage from '../assets/finalSaga.webp';
+import foursEmperorsImage from '../assets/fours-emperors.webp';
+import finalSagaImage from '../assets/final-saga.webp';
 
 const arcosData = {
     1: {
