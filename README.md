@@ -1,12 +1,54 @@
-# React + Vite
+# 🏴‍☠️ One Piece Project - Saga & Character Explorer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![One Piece Logo](src/assets/one-piece-logo.webp)
 
-Currently, two official plugins are available:
+Este es un proyecto personal desarrollado con React y Tailwind CSS, inspirado en el universo de One Piece. La aplicación web permite a los usuarios explorar la lista de los Piratas del Sombrero de Paja y las principales sagas de la serie, con descripciones detalladas y una interfaz de usuario temática.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Características
 
-## Expanding the ESLint configuration
+- **Lista de Personajes:** Explora a los miembros de la tripulación de Monkey D. Luffy, con una página de detalles para cada uno.
+- **Lista de Sagas:** Descubre las 10 sagas más importantes de la serie, con descripciones que resumen la trama principal de cada una.
+- **Diseño Temático:** Interfaz de usuario estilizada con colores y tipografías que evocan la estética de One Piece.
+- **Responsive Design:** La aplicación se adapta y funciona perfectamente en dispositivos móviles y de escritorio.
+- **Enrutamiento Dinámico:** Navegación fluida entre la página principal y las páginas de detalles de cada personaje y saga.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Tecnologías Utilizadas
+
+- **Vite:** Bundler y entorno de desarrollo para un rápido desarrollo.
+- **React:** Biblioteca de JavaScript para construir la interfaz de usuario.
+- **React Router DOM:** Para gestionar la navegación y las rutas de la aplicación.
+- **Tailwind CSS:** Framework CSS utility-first para un diseño rápido y flexible.
+
+## 📦 Instalación y Configuración
+
+Para poner en marcha el proyecto en tu máquina local, sigue estos pasos:
+
+1.  **Clona el repositorio:**
+    ```bash
+    git clone [https://github.com/Franlink34/one-piece-project.git](https://github.com/Franlink34/one-piece-project.git)
+    cd one-piece-project
+    ```
+
+2.  **Instala las dependencias:**
+    ```bash
+    npm install
+    ```
+
+3.  **Ejecuta la aplicación en modo desarrollo:**
+    ```bash
+    npm run dev
+    ```
+
+La aplicación estará disponible en `http://localhost:5173`.
+
+## ✍️ Autor
+
+- **Francisco Rodriguez Carrillo** - Creador y desarrollador principal.
+
+---
+
+**Enlaces:**
+
+- [GitHub](https://github.com/franlink34)
+- [LinkedIn](https://www.linkedin.com/in/francisco-rodriguez-carrillo-919ab71b7/)
+- [Mi Currículum](https://curriculum-francisco-rodriguez.vercel.app/)
