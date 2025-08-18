@@ -1,7 +1,6 @@
 export interface ApiPersonaje {
     id: number;
     name: string;
-    origin: string;
     image: string;
     bounty: string;
 }
