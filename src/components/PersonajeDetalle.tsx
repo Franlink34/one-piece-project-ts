@@ -1,26 +1,47 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import axios from 'axios';
-import personajesData from '../utils/personajesData';
-import mugiwaraImages from '../utils/mugiwaraImages';
+import personajesData from '../utils/personajesData.ts';
+import mugiwaraImages from '../utils/mugiwaraImages.ts';
+import { ApiPersonaje, Personaje } from '../types.ts';
+
+interface PersonajeCompleto extends Omit<ApiPersonaje, 'image'>, Partial<Personaje> {
+    image: string;
+}
 
 const PersonajeDetalle = () => {
-    const { id } = useParams();
-    const [personaje, setPersonaje] = useState(null);
+    const { id } = useParams<{ id: string }>();
+
+    const [personaje, setPersonaje] = useState<PersonajeCompleto | null>(null);
     const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null);
+    const [error, setError] = useState<string | null>(null);
 
     useEffect(() => {
         const fetchPersonaje = async () => {
+            if (!id) {
+                setError('ID de personaje no proporcionado en la URL.');
+                setLoading(false);
+                return;
+            }
+
             try {
-                const res = await axios.get(`https://api.api-onepiece.com/v2/characters/en/${id}`);
-                const personajeConDatosLocales = {
+                const res = await axios.get<ApiPersonaje>(`https://api.api-onepiece.com/v2/characters/en/${id}`);
+                
+                const datosLocales = personajesData[id] as Personaje | undefined;
+
+                const personajeConDatosLocales: PersonajeCompleto = {
                     ...res.data,
-                    ...personajesData[id],
+                    ...(datosLocales || {}),
+                    image: datosLocales?.image || mugiwaraImages[id] || res.data.image,
                 };
                 setPersonaje(personajeConDatosLocales);
+
             } catch (err) {
-                setError(err.message || 'No se pudo encontrar la información del personaje.');
+                if (axios.isAxiosError(err)) {
+                    setError(err.message || 'No se pudo encontrar la información del personaje.');
+                } else {
+                    setError('Ocurrió un error inesperado');
+                }
             } finally {
                 setLoading(false);
             }
@@ -46,20 +67,25 @@ const PersonajeDetalle = () => {
             </div>
         );
     }
+    
+    if (!personaje) {
+        return null;
+    }
+
     return (
         <div className="bg-opacity-80 p-8 min-h-screen text-white">
             <div className="max-w-4xl mx-auto p-6">
                 <div className="text-center">
                     <h1 className="font-luckiest text-5xl text-yellow-400 mb-4">{personaje.name}</h1>
                     <img
-                        src={personajesData[personaje.id]?.image || mugiwaraImages[personaje.id]}
+                        src={personaje.image || ''}
                         alt={personaje.name}
                         className="w-80 h-auto rounded-lg shadow-lg mx-auto"
                     />
                 </div>
-                <div className="mt-8 text-lg bg-blue-900 bg-opacity-50">
-                    <p className="mb-2 font-luckiest text-yellow-400"><span className="font-bold text-yellow-500 underline">Rol:</span> {personaje.role}</p>
-                    <p className="mb-2 font-bangers text-yellow-400"><span className="font-bold text-yellow-500 underline">Descripción:</span> {personaje.description}</p>
+                <div className="mt-8 text-lg bg-blue-900 bg-opacity-50 p-6 rounded-lg shadow-lg">
+                    {personaje.role && <p className="mb-2 font-luckiest text-yellow-400"><span className="font-bold text-yellow-500 underline">Rol:</span> {personaje.role}</p>}
+                    {personaje.description && <p className="mb-2 font-bangers text-yellow-400"><span className="font-bold text-yellow-500 underline">Descripción:</span> {personaje.description}</p>}
                 </div>
             </div>
             <div className="text-center mt-8">
@@ -71,4 +97,4 @@ const PersonajeDetalle = () => {
     );
 };
 
-export default PersonajeDetalle
+export default PersonajeDetalle;
