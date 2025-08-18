@@ -27,8 +27,8 @@ Para poner en marcha el proyecto en tu máquina local, sigue estos pasos:
 
 1.  **Clona el repositorio:**
     ```bash
-    git clone [https://github.com/Franlink34/one-piece-project.git](https://github.com/Franlink34/one-piece-project.git)
-    cd one-piece-project
+    git clone [https://github.com/Franlink34/one-piece-project-ts.git](https://github.com/Franlink34/one-piece-project-ts.git)
+    cd one-piece-project-ts
     ```
 
 2.  **Instala las dependencias:**
