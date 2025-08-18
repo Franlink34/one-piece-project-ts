@@ -2,13 +2,14 @@
 
 ![One Piece Logo](src/assets/one-piece-logo.webp)
 
-Este es un proyecto personal desarrollado con React y Tailwind CSS, inspirado en el universo de One Piece. La aplicación web permite a los usuarios explorar la lista de los Piratas del Sombrero de Paja y las principales sagas de la serie, con descripciones detalladas y una interfaz de usuario temática.
+Este es un proyecto personal desarrollado con React y TypeScript, y estilizado con Tailwind CSS, inspirado en el universo de One Piece. La aplicación web permite a los usuarios explorar la lista de los Piratas del Sombrero de Paja y las principales sagas de la serie, con descripciones detalladas y una interfaz de usuario temática.
 
 ## 🚀 Características
 
 - **Lista de Personajes:** Explora a los miembros de la tripulación de Monkey D. Luffy, con una página de detalles para cada uno.
 - **Lista de Sagas:** Descubre las 10 sagas más importantes de la serie, con descripciones que resumen la trama principal de cada una.
 - **Diseño Temático:** Interfaz de usuario estilizada con colores y tipografías que evocan la estética de One Piece.
+- **Desarrollo con TypeScript:** El proyecto utiliza TypeScript para asegurar un código más robusto y con tipado estático, reduciendo errores y mejorando la legibilidad.
 - **Responsive Design:** La aplicación se adapta y funciona perfectamente en dispositivos móviles y de escritorio.
 - **Enrutamiento Dinámico:** Navegación fluida entre la página principal y las páginas de detalles de cada personaje y saga.
 
@@ -16,6 +17,7 @@ Este es un proyecto personal desarrollado con React y Tailwind CSS, inspirado en
 
 - **Vite:** Bundler y entorno de desarrollo para un rápido desarrollo.
 - **React:** Biblioteca de JavaScript para construir la interfaz de usuario.
+- **TypeScript:** Un superset de JavaScript que añade tipado estático, mejorando el mantenimiento del código.
 - **React Router DOM:** Para gestionar la navegación y las rutas de la aplicación.
 - **Tailwind CSS:** Framework CSS utility-first para un diseño rápido y flexible.
 
